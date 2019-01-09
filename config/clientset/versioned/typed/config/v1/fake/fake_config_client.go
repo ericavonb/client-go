@@ -36,10 +36,6 @@ func (c *FakeConfigV1) DNSs() v1.DNSInterface {
 	return &FakeDNSs{c}
 }
 
-func (c *FakeConfigV1) IdentityProviders() v1.IdentityProviderInterface {
-	return &FakeIdentityProviders{c}
-}
-
 func (c *FakeConfigV1) Images() v1.ImageInterface {
 	return &FakeImages{c}
 }

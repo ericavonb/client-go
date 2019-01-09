@@ -20,8 +20,6 @@ type Interface interface {
 	Consoles() ConsoleInformer
 	// DNSs returns a DNSInformer.
 	DNSs() DNSInformer
-	// IdentityProviders returns a IdentityProviderInformer.
-	IdentityProviders() IdentityProviderInformer
 	// Images returns a ImageInformer.
 	Images() ImageInformer
 	// Infrastructures returns a InfrastructureInformer.
@@ -77,11 +75,6 @@ func (v *version) Consoles() ConsoleInformer {
 // DNSs returns a DNSInformer.
 func (v *version) DNSs() DNSInformer {
 	return &dNSInformer{factory: v.factory, tweakListOptions: v.tweakListOptions}
-}
-
-// IdentityProviders returns a IdentityProviderInformer.
-func (v *version) IdentityProviders() IdentityProviderInformer {
-	return &identityProviderInformer{factory: v.factory, tweakListOptions: v.tweakListOptions}
 }
 
 // Images returns a ImageInformer.

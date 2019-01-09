@@ -26,10 +26,6 @@ type ConsoleListerExpansion interface{}
 // DNSLister.
 type DNSListerExpansion interface{}
 
-// IdentityProviderListerExpansion allows custom methods to be added to
-// IdentityProviderLister.
-type IdentityProviderListerExpansion interface{}
-
 // ImageListerExpansion allows custom methods to be added to
 // ImageLister.
 type ImageListerExpansion interface{}

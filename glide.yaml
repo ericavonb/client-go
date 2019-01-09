@@ -13,7 +13,7 @@ import:
 - package: k8s.io/client-go
   version: kubernetes-1.11.1
 - package: github.com/openshift/api
-  version: master
+  version: b65e393810ffb4d6b54568b9807d9bc620af3ec9
 - package: github.com/golang/glog
 - package: github.com/spf13/pflag
 # for gengo

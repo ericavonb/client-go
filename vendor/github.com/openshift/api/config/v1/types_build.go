@@ -22,7 +22,7 @@ type BuildSpec struct {
 	// AdditionalTrustedCA is a reference to a ConfigMap containing additional CAs that
 	// should be trusted for image pushes and pulls during builds.
 	// +optional
-	AdditionalTrustedCA ConfigMapReference `json:"additionalTrustedCA,omitempty"`
+	AdditionalTrustedCA ConfigMapFileReference `json:"additionalTrustedCA,omitempty"`
 	// BuildDefaults controls the default information for Builds
 	// +optional
 	BuildDefaults BuildDefaults `json:"buildDefaults,omitempty"`
@@ -76,15 +76,15 @@ type ImageLabel struct {
 type ProxyConfig struct {
 	// HttpProxy is the URL of the proxy for HTTP requests
 	// +optional
-	HTTPProxy *string `json:"httpProxy,omitempty"`
+	HTTPProxy string `json:"httpProxy,omitempty"`
 
 	// HttpsProxy is the URL of the proxy for HTTPS requests
 	// +optional
-	HTTPSProxy *string `json:"httpsProxy,omitempty"`
+	HTTPSProxy string `json:"httpsProxy,omitempty"`
 
 	// NoProxy is the list of domains for which the proxy should not be used
 	// +optional
-	NoProxy *string `json:"noProxy,omitempty"`
+	NoProxy string `json:"noProxy,omitempty"`
 }
 
 type BuildOverrides struct {
